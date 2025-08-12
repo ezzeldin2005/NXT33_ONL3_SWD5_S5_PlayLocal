@@ -17,3 +17,4 @@ Please send an email to Book a meeting on the Teams link
 **Email**: ezzeldinomar7@gmail.com
 
 **Teams**:
+https://teams.microsoft.com/l/meetup-join/19%3ameeting_NGQ3ZjBkZjYtNzU2Ny00ZTgxLWJiMjctOWQ3MWRjNmMwZDBk%40thread.v2/0?context=%7b%22Tid%22%3a%2277255288-5298-4ea5-81aa-a13e604c30ac%22%2c%22Oid%22%3a%2251848b57-47e3-4b28-8f71-c706c08277d9%22%7d
