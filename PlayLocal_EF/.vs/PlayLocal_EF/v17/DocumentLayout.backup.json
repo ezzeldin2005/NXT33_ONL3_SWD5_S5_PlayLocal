@@ -3,16 +3,8 @@
   "WorkspaceRootPath": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F07A50FE-F93E-4F9B-8F01-E211A0F2B4D0}|PlayLocal_EF.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\playlocal_ef\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07A50FE-F93E-4F9B-8F01-E211A0F2B4D0}|PlayLocal_EF.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\EFCore\\Migrations\\20251123145215_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:EFCore\\Migrations\\20251123145215_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F07A50FE-F93E-4F9B-8F01-E211A0F2B4D0}|PlayLocal_EF.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\playlocal_ef\\data\\contexts\\playlocaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F07A50FE-F93E-4F9B-8F01-E211A0F2B4D0}|PlayLocal_EF.csproj|solutionrelative:data\\contexts\\playlocaldbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Data\\Migrations\\20251124212716_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Data\\Migrations\\20251124212716_InitialCreate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +14,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,41 +26,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "20251123145215_InitialCreate.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\EFCore\\Migrations\\20251123145215_InitialCreate.cs",
-              "RelativeDocumentMoniker": "EFCore\\Migrations\\20251123145215_InitialCreate.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\EFCore\\Migrations\\20251123145215_InitialCreate.cs",
-              "RelativeToolTip": "EFCore\\Migrations\\20251123145215_InitialCreate.cs",
-              "ViewState": "AgIAAHIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T14:52:16.12Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "PlayLocalDBcontext.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Data\\Contexts\\PlayLocalDBcontext.cs",
-              "RelativeDocumentMoniker": "Data\\Contexts\\PlayLocalDBcontext.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Data\\Contexts\\PlayLocalDBcontext.cs",
-              "RelativeToolTip": "Data\\Contexts\\PlayLocalDBcontext.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAADwvxgAAAAIAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T14:47:46.2Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAxwA0AAAABAAAAAAAAAA==",
+              "Title": "20251124212716_InitialCreate.cs",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Data\\Migrations\\20251124212716_InitialCreate.cs",
+              "RelativeDocumentMoniker": "Data\\Migrations\\20251124212716_InitialCreate.cs",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PlayLocal_EF\\Data\\Migrations\\20251124212716_InitialCreate.cs",
+              "RelativeToolTip": "Data\\Migrations\\20251124212716_InitialCreate.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-23T14:46:15.013Z",
+              "WhenOpened": "2025-11-24T21:27:16.607Z",
               "EditorCaption": ""
             }
           ]

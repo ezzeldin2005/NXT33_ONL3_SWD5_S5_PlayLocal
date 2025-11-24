@@ -11,6 +11,8 @@ namespace PlayLocal_EF.Entities
         public string PhotoID { get; set; }
         public string Image { get; set; } // URL or path to the image
 
+        public string Title { get; set; } // عنوان الصورة
+
         public string CourtID { get; set; } // Foreign Key للملاعب
         public Court Court { get; set; } // Navigation Property للملاعب
     }

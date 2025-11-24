@@ -18,11 +18,16 @@ namespace PlayLocal_EF.Data.Contexts
 
         public DbSet<Owner> Owners { get; set; }
         public DbSet<Venue> Venues { get; set; }
-        public DbSet<VenueService> VenueServices { get; set; }
         public DbSet<Court> Courts { get; set; }
         public DbSet<CourtPhoto> CourtPhotos { get; set; }
         public DbSet<SportsType> SportsTypes { get; set; }
-        
+
+        public DbSet<Booking> Bookings { get; set; }
+
+        public DbSet<VenueWorkingHours> VenueWorkingHours { get; set; }
+
+        public DbSet<Player> Players { get; set; }
+
         override protected void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());

@@ -41,6 +41,7 @@ namespace PlayLocal_EF.Data.Configurations
 
             builder.Property(c => c.Size)
                 .HasColumnType("int");
+            
 
             // Relationships
 

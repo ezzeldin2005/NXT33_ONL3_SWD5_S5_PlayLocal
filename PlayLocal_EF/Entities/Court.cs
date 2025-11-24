@@ -22,5 +22,7 @@ namespace PlayLocal_EF.Entities
 
         public ICollection<CourtPhoto> CourtPhotos { get; set; } = new HashSet<CourtPhoto>(); // Navigation Property لصور الملعب
         public ICollection<SportsType> SportsTypes { get; set; } = new HashSet<SportsType>(); // Navigation Property لأنواع الرياضات اللي الملعب بيدعمها
+
+        public ICollection<Booking> Bookings { get; set; } = new HashSet<Booking>(); // Navigation Property للحجوزات اللي اتعملت على الملعب
     }
 }

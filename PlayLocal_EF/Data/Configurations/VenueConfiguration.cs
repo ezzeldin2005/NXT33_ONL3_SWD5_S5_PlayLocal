@@ -38,18 +38,6 @@ namespace PlayLocal_EF.Data.Configurations
                         .HasDefaultValue(false);
                         
 
-            builder.Property(v => v.OpenTime)
-                        .HasColumnType("Time")
-                        .IsRequired();
-
-            builder.Property(v => v.CloseTime)
-                        .HasColumnType("Time")
-                        .IsRequired();
-
-            builder.Property(v => v.CloseDay)
-                        .HasColumnType("nvarchar(20)")
-                        .IsRequired();
-
             // Relationships
 
             builder.HasMany(v => v.Courts) // One-to-Many relationship between Venue and Court  
@@ -57,10 +45,11 @@ namespace PlayLocal_EF.Data.Configurations
                     .HasForeignKey(c => c.VenueID)
                     .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasMany(v => v.VenueServices) // One-to-Many relationship between Venue and VenueService
-                    .WithOne(vs => vs.Venue)
-                    .HasForeignKey(vs => vs.VenueID)
+            builder.HasMany(v => v.VenueWorkingHours) // One-to-Many relationship between Venue and VenueWorkingHours 
+                    .WithOne(vwh => vwh.Venue)
+                    .HasForeignKey(vwh => vwh.VenueID)
                     .OnDelete(DeleteBehavior.Cascade);
+
 
         }
     }

@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using PlayLocal_EF.Data.Contexts;
 
@@ -11,9 +12,11 @@ using PlayLocal_EF.Data.Contexts;
 namespace PlayLocal_EF.Data.Migrations
 {
     [DbContext(typeof(PlayLocalDBcontext))]
-    partial class PlayLocalDBcontextModelSnapshot : ModelSnapshot
+    [Migration("20251124212716_InitialCreate")]
+    partial class InitialCreate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

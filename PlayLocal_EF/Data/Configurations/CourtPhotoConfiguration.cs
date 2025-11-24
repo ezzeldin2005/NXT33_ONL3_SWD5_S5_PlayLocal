@@ -20,6 +20,10 @@ namespace PlayLocal_EF.Data.Configurations
                    .HasColumnType("nvarchar(200)")
                    .HasMaxLength(200);
 
+            builder.Property(cp => cp.Title)
+                     .HasColumnType("nvarchar(100)")
+                     .HasMaxLength(100);
+
 
         }
     }
