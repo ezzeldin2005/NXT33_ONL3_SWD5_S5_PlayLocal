@@ -1,0 +1,37 @@
+﻿
+@{
+}
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignUp</title>
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>إنشاء حساب جديد</h2>
+        <form>
+            <label>الاسم الكامل</label>
+            <input type="text" placeholder="الاسم الكامل" required>
+            <label>البريد الإلكتروني</label>
+            <input type="email" placeholder="example@mail.com" required>
+            <label>رقم الهاتف</label>
+            <input type="tel" placeholder="01012345678" required>
+            <label>كلمة المرور</label>
+            <input type="password" placeholder="********" required>
+            <label>تأكيد كلمة المرور</label>
+            <input type="password" placeholder="********" required>
+            <label>نوع الحساب</label>
+            <select required>
+                <option value="player">لاعب</option>
+                <option value="owner">مالك ملعب</option>
+            </select>
+            <button type="submit" class="btn btn-primary">التسجيل</button>
+        </form>
+        <p>لديك حساب بالفعل؟ <a href="login.html">تسجيل الدخول</a></p>
+    </div>
+</body>
+</html>
+

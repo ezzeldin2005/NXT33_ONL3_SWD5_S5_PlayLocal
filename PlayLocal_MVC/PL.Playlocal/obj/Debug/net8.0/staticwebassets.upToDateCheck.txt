@@ -1,0 +1,7 @@
+wwwroot\CSS\LandingPage.css
+wwwroot\CSS\style.css
+wwwroot\Images\ahly-stadium.jpeg
+wwwroot\Images\gezira-tennis.jpeg
+wwwroot\Images\helwan-club.jpeg
+wwwroot\Images\squash-world.jpeg
+wwwroot\JS\script.js
