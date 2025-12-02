@@ -3,26 +3,12 @@
   "WorkspaceRootPath": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F6EBAC7-384E-45CE-8361-3338CC4FDD25}|..\\BLL.PlayLocal\\BLL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\bll.playlocal\\repostries\\courtrepostiory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\home\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1FC83093-E1BB-4100-BF8F-398F0E472308}|..\\DAL.PlayLocal\\DAL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\dal.playlocal\\models\\sportstype.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6F6EBAC7-384E-45CE-8361-3338CC4FDD25}|..\\BLL.PlayLocal\\BLL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\bll.playlocal\\repostries\\sportstyperepostiory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FC83093-E1BB-4100-BF8F-398F0E472308}|..\\DAL.PlayLocal\\DAL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\dal.playlocal\\models\\court.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FC83093-E1BB-4100-BF8F-398F0E472308}|..\\DAL.PlayLocal\\DAL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\dal.playlocal\\configurations\\sportstypeconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{1FC83093-E1BB-4100-BF8F-398F0E472308}|..\\DAL.PlayLocal\\DAL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\dal.playlocal\\configurations\\courtconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\shared\\_ownerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\shared\\_ownerlayout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Bookmark",
@@ -44,93 +30,28 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "SportsTypeRepostiory.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\BLL.PlayLocal\\Repostries\\SportsTypeRepostiory.cs",
-              "RelativeDocumentMoniker": "..\\BLL.PlayLocal\\Repostries\\SportsTypeRepostiory.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\BLL.PlayLocal\\Repostries\\SportsTypeRepostiory.cs",
-              "RelativeToolTip": "..\\BLL.PlayLocal\\Repostries\\SportsTypeRepostiory.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:49:50.835Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CourtRepostiory.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\BLL.PlayLocal\\Repostries\\CourtRepostiory.cs",
-              "RelativeDocumentMoniker": "..\\BLL.PlayLocal\\Repostries\\CourtRepostiory.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\BLL.PlayLocal\\Repostries\\CourtRepostiory.cs",
-              "RelativeToolTip": "..\\BLL.PlayLocal\\Repostries\\CourtRepostiory.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAQwBoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T11:49:24.211Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Court.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Models\\Court.cs",
-              "RelativeDocumentMoniker": "..\\DAL.PlayLocal\\Models\\Court.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Models\\Court.cs",
-              "RelativeToolTip": "..\\DAL.PlayLocal\\Models\\Court.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAzwBQAAABGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T10:38:47.5Z",
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Home\\Login.cshtml",
+              "RelativeDocumentMoniker": "Views\\Home\\Login.cshtml",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Home\\Login.cshtml",
+              "RelativeToolTip": "Views\\Home\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T13:21:51.251Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "SportsType.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Models\\SportsType.cs",
-              "RelativeDocumentMoniker": "..\\DAL.PlayLocal\\Models\\SportsType.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Models\\SportsType.cs",
-              "RelativeToolTip": "..\\DAL.PlayLocal\\Models\\SportsType.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T10:38:45.242Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "SportsTypeConfiguration.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Configurations\\SportsTypeConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\DAL.PlayLocal\\Configurations\\SportsTypeConfiguration.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Configurations\\SportsTypeConfiguration.cs",
-              "RelativeToolTip": "..\\DAL.PlayLocal\\Configurations\\SportsTypeConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T10:38:41.566Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "CourtConfiguration.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Configurations\\CourtConfiguration.cs",
-              "RelativeDocumentMoniker": "..\\DAL.PlayLocal\\Configurations\\CourtConfiguration.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\DAL.PlayLocal\\Configurations\\CourtConfiguration.cs",
-              "RelativeToolTip": "..\\DAL.PlayLocal\\Configurations\\CourtConfiguration.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-30T10:38:38.048Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAxwC0AAAAjAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T19:51:42.128Z",
+              "Title": "_OwnerLayout.cshtml",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Shared\\_OwnerLayout.cshtml",
+              "RelativeDocumentMoniker": "Views\\Shared\\_OwnerLayout.cshtml",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Shared\\_OwnerLayout.cshtml",
+              "RelativeToolTip": "Views\\Shared\\_OwnerLayout.cshtml",
+              "ViewState": "AgIAAGkAAAAAAAAAAAAAAHEAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-02T13:17:31.805Z",
               "EditorCaption": ""
             }
           ]

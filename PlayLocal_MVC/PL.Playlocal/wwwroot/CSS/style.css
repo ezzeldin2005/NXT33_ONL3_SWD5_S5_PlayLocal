@@ -251,53 +251,123 @@ body {
   margin-bottom: 16px;
 }
 
-/* ===== Auth Pages ===== */
+/* ===== Auth Pages - Fixed & Improved for Bootstrap ===== */
 .auth-container {
-  max-width: 400px;
-  margin: 80px auto;
-  background-color: #ffffff;
-  padding: 32px;
-  border-radius: 8px;
-  box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-  text-align: center;
+    max-width: 480px; /* Slightly wider for better spacing */
+    margin: 60px auto; /* Reduced top margin for modern feel */
+    background: #ffffff;
+    padding: 40px 32px; /* More breathing room */
+    border-radius: 16px; /* Softer, modern corners */
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12);
+    text-align: center;
+    border: 1px solid rgba(0, 0, 0, 0.05);
 }
 
-.auth-container h2 {
-  font-size: 24px;
-  margin-bottom: 20px;
+    .auth-container .logo {
+        font-size: 2.2rem;
+        font-weight: 800;
+        color: #16a34a;
+        margin-bottom: 8px;
+        letter-spacing: -0.5px;
+    }
+
+    .auth-container h2 {
+        font-size: 26px;
+        font-weight: 600;
+        color: #1f2937;
+        margin-bottom: 28px;
+    }
+
+    /* Override Bootstrap defaults to match your original style */
+    .auth-container .form-control,
+    .auth-container .form-select {
+        padding: 12px 14px;
+        font-size: 16px;
+        border: 1.5px solid #d1d5db;
+        border-radius: 10px;
+        transition: all 0.25s ease;
+    }
+
+        .auth-container .form-control:focus,
+        .auth-container .form-select:focus {
+            border-color: #16a34a;
+            box-shadow: 0 0 0 3px rgba(22, 163, 74, 0.15);
+            outline: none;
+        }
+
+    /* Labels */
+    .auth-container .form-label {
+        font-weight: 600;
+        color: #374151;
+        text-align: left;
+        display: block;
+        margin-bottom: 6px;
+        font-size: 14.5px;
+    }
+
+    /* Submit Button */
+    .auth-container button[type="submit"] {
+        margin-top: 10px;
+        padding: 14px;
+        border-radius: 12px;
+        border: none;
+        background: linear-gradient(to right, #16a34a, #15803d);
+        color: white;
+        font-size: 17px;
+        font-weight: 600;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 12px rgba(22, 163, 74, 0.25);
+    }
+
+        .auth-container button[type="submit"]:hover {
+            background: linear-gradient(to right, #15803d, #166534);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(22, 163, 74, 0.35);
+        }
+
+        .auth-container button[type="submit"]:active {
+            transform: translateY(0);
+        }
+
+    /* Login link */
+    .auth-container p {
+        margin-top: 24px;
+        font-size: 15px;
+        color: #6b7280;
+    }
+
+        .auth-container p a {
+            color: #16a34a;
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+            .auth-container p a:hover {
+                text-decoration: underline;
+            }
+
+    /* Validation messages */
+    .auth-container .text-danger {
+        font-size: 13.5px;
+        text-align: left;
+        margin-top: 6px;
+    }
+
+/* Address field smooth show/hide */
+.address-group {
+    transition: all 0.4s ease;
+    opacity: 0;
+    height: 0;
+    overflow: hidden;
+    margin-bottom: 0 !important;
 }
 
-.auth-container form {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-}
-
-.auth-container input, .auth-container select {
-  padding: 10px;
-  border-radius: 6px;
-  border: 1px solid #d1d5db;
-}
-
-.auth-container button {
-  padding: 10px;
-  border-radius: 6px;
-  border: none;
-  background-color: #16a34a;
-  color: white;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.auth-container button:hover {
-  background-color: #065f46;
-}
-
-.auth-container p {
-  font-size: 14px;
-  margin-top: 12px;
-}
+    .address-group.show {
+        opacity: 1;
+        height: auto;
+        margin-bottom: 1rem !important;
+    }
 
 /* ===== Dashboard ===== */
 .dashboard {
@@ -358,4 +428,13 @@ body {
   .hero p {
     font-size: 16px;
   }
+}
+
+.error-summary {
+    background: #fee2e2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+    padding: 12px 16px;
+    border-radius: 12px;
+    margin-bottom: 20px;
 }

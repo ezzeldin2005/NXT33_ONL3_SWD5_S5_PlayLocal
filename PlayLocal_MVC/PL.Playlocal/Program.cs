@@ -14,6 +14,14 @@ namespace PL.Playlocal
 
             //Add services to the container.
 
+            builder.Services.AddDistributedMemoryCache();                    // Required for Session
+            builder.Services.AddSession(options =>
+            {
+                options.IdleTimeout = TimeSpan.FromMinutes(30);             // Session expires after 30 min of inactivity
+                options.Cookie.HttpOnly = true;
+                options.Cookie.IsEssential = true;
+            });
+
             // Add DbContext with SQL Server provider
             builder.Services.AddDbContext<PlayLocalDBcontext>(options =>
             options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
@@ -40,8 +48,10 @@ namespace PL.Playlocal
 
             var app = builder.Build();
 
-            app.UseStaticFiles();
+            app.UseHttpsRedirection();
+            app.UseSession();
             app.UseRouting();
+            app.UseStaticFiles();
 
             app.MapControllerRoute(
                 name: "default",

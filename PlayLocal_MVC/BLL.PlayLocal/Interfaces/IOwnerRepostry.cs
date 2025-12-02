@@ -17,6 +17,8 @@ namespace BLL.PlayLocal.Interfaces
 
         public Owner GetOwnerById(string Id);
 
+        public Owner GetOwnerByEmail(string email);
+
         public IEnumerable<Owner> GetAllOwners();
 
         IEnumerable<Venue> GetVenuesByOwnerId(string ownerId);

@@ -52,6 +52,12 @@ namespace BLL.PlayLocal.Repostries
             return ownerToFind;
         }
 
+        public Owner GetOwnerByEmail(string email)
+        {
+            Owner? owner = _context.Owners.FirstOrDefault(o => o.Email == email);
+            return owner;
+        }
+
         public int UpdateOwner(Owner owner)
         {
             _context.Owners.Update(owner);
