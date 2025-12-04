@@ -20,7 +20,7 @@ namespace DAL.PlayLocal.Models
         public string OwnerID { get; set; } // Foreign Key لصاحب المكان
         public Owner Owner { get; set; } // Navigation Property لصاحب المكان
 
-        public ICollection<VenueWorkingHours> VenueWorkingHours { get; set; } = new HashSet<VenueWorkingHours>(); // Navigation Property لساعات العمل بتاعة المكان
+        public  ICollection<VenueWorkingHours> VenueWorkingHours { get; set; } = new HashSet<VenueWorkingHours>(); // Navigation Property لساعات العمل بتاعة المكان
         public ICollection<Court> Courts { get; set; } = new HashSet<Court>();// Navigation Property للملاعب اللي في المكان
         
     }

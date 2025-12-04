@@ -116,9 +116,9 @@
                         Dashboard
                     </a>
                 </li>
-                <li><a href="#">My Fields</a></li>
                 <li><a href="#">Bookings</a></li>
                 <li><a href="#">Earnings</a></li>
+                <li><a asp-controller="Owner" asp-action="Profile">Profile</a></li>
                 <li>
                     <a asp-controller="Home" asp-action="Logout" class="logout">
                         Logout
@@ -130,20 +130,14 @@
 
     <!-- Main Content -->
     <section class="dashboard mt-4">
-        <div class="welcome-header">
-            <h2>
-                Welcome back, <span class="text-success">@ViewBag.UserName!</span>
-            </h2>
-            <p>Manage your football fields, view bookings, and track your revenue</p>
-        </div>
-
+        
         <div>
             @RenderBody()
         </div>
     </section>
 
     <!-- Footer -->
-    <footer>
+    <footer >
         <p>© 2025 PlayLocal • Owner Panel • All Rights Reserved</p>
     </footer>
 

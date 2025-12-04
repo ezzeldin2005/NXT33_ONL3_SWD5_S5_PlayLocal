@@ -1,0 +1,80 @@
+﻿@model PL.Playlocal.ViewModels.VenueViewModel
+@{
+    ViewData["Title"] = "Delete Venue";
+    Layout = "_OwnerLayout";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-danger text-white text-center py-4">
+                    <h3 class="mb-0">
+                        <i class="fas fa-exclamation-triangle"></i> Delete Venue
+                    </h3>
+                </div>
+                <div class="card-body p-5">
+                    <div class="text-center mb-5">
+                        <i class="fas fa-trash-alt fa-5x text-danger mb-4"></i>
+                        <h4 class="text-danger fw-bold">Are you absolutely sure?</h4>
+                        <p class="text-muted lead">
+                            This action <strong>cannot</strong> be undone. This will permanently delete:
+                        </p>
+                    </div>
+
+                    <div class="bg-light p-4 rounded mb-4">
+                        <h5 class="text-center text-danger fw-bold mb-4">@Model.Name</h5>
+
+                        <div class="row text-muted">
+                            <div class="col-md-6 mb-3">
+                                <strong>Address:</strong> @Model.Address
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <strong>Phone:</strong> @Model.MainContactPhone
+                            </div>
+                            <div class="col-12 mb-3">
+                                <strong>Description:</strong> @(string.IsNullOrEmpty(Model.Description) ? "— None —" : Model.Description)
+                            </div>
+                            <div class="col-12">
+                                <strong>Equipment Rental:</strong>
+                                <span class="badge @(Model.HasEquipmentRental ? "bg-success" : "bg-secondary")">
+                                    @(Model.HasEquipmentRental ? "Available" : "Not Available")
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Working Hours Summary -->
+                    <div class="mt-4">
+                        <h6 class="fw-bold text-danger">Working Hours (will be deleted):</h6>
+                        <div class="small text-muted">
+                            @foreach (var h in Model.WorkingHours.OrderBy(x => x.DayOfWeek))
+                            {
+                                var dayName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetAbbreviatedDayName(h.DayOfWeek);
+                                <span>@dayName: @h.OpenTime.ToString(@"hh\:mm") - @h.CloseTime.ToString(@"hh\:mm")</span>
+                                <text> • </text>
+                            }
+                        </div>
+                    </div>
+
+                    <hr class="my-5">
+
+                    <!-- Form -->
+                    <form asp-controller="Owner" asp-action="DeleteVenue" method="post" class="text-center">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="venueId" value="@Model.VenueID" />
+
+                        <div class="d-grid d-md-flex justify-content-center gap-4">
+                            <a asp-controller="Owner" asp-action="OwnerHome" class="btn btn-secondary btn-lg px-5">
+                                Cancel
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg px-5">
+                                <i class="fas fa-trash"></i> Yes, Delete Forever
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

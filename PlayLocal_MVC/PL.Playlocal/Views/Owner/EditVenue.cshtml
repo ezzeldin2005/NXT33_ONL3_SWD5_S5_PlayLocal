@@ -1,0 +1,99 @@
+﻿@model VenueViewModel
+@{
+    ViewData["Title"] = "Edit Venue";
+    Layout = "_OwnerLayout";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-success text-white text-center py-4">
+                    <h3 class="mb-0">Edit Venue</h3>
+                </div>
+                <div class="card-body p-5">
+                    <form asp-controller="Owner" asp-action="EditVenue" method="post" asp-route-id="@Model.VenueID">
+                        @*@Html.AntiForgeryToken()*@
+                       @*  <input type="hidden" asp-for="VenueID" />
+                        <input type="hidden" asp-for="OwnerID" /> *@
+
+                        <div class="row g-4">
+                            <div class="col-md-6">
+                                <label asp-for="Name" class="form-label fw-bold"></label>
+                                <input asp-for="Name" class="form-control form-control-lg" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+                            <div class="col-md-6">
+                                <label asp-for="MainContactPhone" class="form-label fw-bold"></label>
+                                <input asp-for="MainContactPhone" class="form-control" />
+                                <span asp-validation-for="MainContactPhone" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="my-4">
+                            <label asp-for="Address" class="form-label fw-bold"></label>
+                            <input asp-for="Address" class="form-control" />
+                            <span asp-validation-for="Address" class="text-danger"></span>
+                        </div>
+
+                        <div class="my-4">
+                            <label asp-for="Description" class="form-label"></label>
+                            <textarea asp-for="Description" class="form-control" rows="4"></textarea>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-8">
+                                <label asp-for="GoogleMapsLink" class="form-label"></label>
+                                <input asp-for="GoogleMapsLink" class="form-control" />
+                            </div>
+                            <div class="col-md-4">
+                                <label class="form-label d-block">Equipment Rental</label>
+                                <div class="form-check form-switch">
+                                    <input asp-for="HasEquipmentRental" class="form-check-input" type="checkbox" />
+                                    <label asp-for="HasEquipmentRental" class="form-check-label">Available</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- WORKING HOURS - SAME AS ADD -->
+                        <div class="mt-5">
+                            <h4 class="fw-bold text-success mb-4">Working Hours</h4>
+                            <div class="row g-3">
+                                @for (int i = 0; i < Model.WorkingHours.Count; i++)
+                                {
+                                    var day = Model.WorkingHours[i];
+                                    var dayName = System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetDayName(day.DayOfWeek);
+                                    <div class="col-md-6 col-lg-4">
+                                        <div class="card border-0 shadow-sm h-100">
+                                            <div class="card-body">
+                                                <h6 class="fw-bold text-center mb-3">@dayName</h6>
+                                                <div class="row g-2">
+                                                    <div class="col-6">
+                                                        <label class="small text-muted">Open</label>
+                                                        <input type="time" class="form-control form-control-sm"
+                                                               asp-for="@Model.WorkingHours[i].OpenTime" />
+                                                    </div>
+                                                    <div class="col-6">
+                                                        <label class="small text-muted">Close</label>
+                                                        <input type="time" class="form-control form-control-sm"
+                                                               asp-for="@Model.WorkingHours[i].CloseTime" />
+                                                    </div>
+                                                </div>
+                                                <input type="hidden" asp-for="@Model.WorkingHours[i].DayOfWeek" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+
+                        <div class="d-grid d-md-flex justify-content-md-end gap-3 mt-5">
+                            <a asp-controller="Owner" asp-action="OwnerHome" class="btn btn-secondary btn-lg">Cancel</a>
+                            <input type="submit" value="Save Changes" class="btn btn-success btn-lg px-5" />
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

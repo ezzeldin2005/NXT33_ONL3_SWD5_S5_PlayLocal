@@ -24,15 +24,11 @@ namespace BLL.PlayLocal.Repostries
             return _context.SaveChanges();
         }
 
-        public int DeleteWorkingHours(string id)
+        public int DeleteWorkingHours(string venueId)
         {
-            VenueWorkingHours? hours = _context.VenueWorkingHours.Find(id);
-            if (hours != null)
-            {
-                _context.VenueWorkingHours.Remove(hours);
-                return _context.SaveChanges();
-            }
-            return 0;
+            var hours = _context.VenueWorkingHours.Where(h => h.VenueID == venueId);
+            _context.VenueWorkingHours.RemoveRange(hours);
+            return _context.SaveChanges();
         }
 
         

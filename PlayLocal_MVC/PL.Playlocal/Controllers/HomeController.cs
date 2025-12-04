@@ -43,9 +43,9 @@ namespace PL.Playlocal.Controllers
             {
                 // Success → Store user type in session
                 HttpContext.Session.SetString("UserType", "Player");
-                HttpContext.Session.SetString("UserId", player.PlayerID);
+                HttpContext.Session.SetString("UserId", player.PlayerID.ToString());
                 HttpContext.Session.SetString("UserName", player.FullName);
-                return RedirectToAction("PlayerHome", "Player"); // or create later
+                return RedirectToAction("PlayerHome", "Player"); 
             }
 
             // Then try Owners
@@ -54,9 +54,9 @@ namespace PL.Playlocal.Controllers
             if (owner != null && owner.Password == model.Password)
             {
                 HttpContext.Session.SetString("UserType", "Owner");
-                HttpContext.Session.SetString("UserId", owner.OwnerID);
+                HttpContext.Session.SetString("UserId", owner.OwnerID.ToString());
                 HttpContext.Session.SetString("UserName", owner.FullName);
-                return RedirectToAction("OwnerHome", "Owner"); // or create later
+                return RedirectToAction("OwnerHome", "Owner"); 
             }
 
             ModelState.AddModelError("", "Invalid email or password.");

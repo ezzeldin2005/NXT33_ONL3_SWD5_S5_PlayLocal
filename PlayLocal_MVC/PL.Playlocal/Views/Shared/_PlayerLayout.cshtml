@@ -107,6 +107,7 @@
             <ul class="nav-links d-flex list-unstyled mb-0">
                 <li><a asp-controller="Player" asp-action="PlayerHome">Home</a></li>
                 <li><a href="#">My Bookings</a></li>
+                <li><a href="#">Profile</a></li>
                 <li>
                     <a asp-controller="Home" asp-action="Logout" class="logout">
                         Logout
@@ -118,13 +119,7 @@
 
     <!-- Main Content Area -->
     <section class="dashboard mt-4">
-        <div class="welcome-header">
-            <h2>
-                Welcome back, <span class="text-success">@ViewBag.UserName!</span>
-            </h2>
-            <p>Browse and book your favorite football fields</p>
-        </div>
-
+            
         <div>
             @RenderBody()
         </div>

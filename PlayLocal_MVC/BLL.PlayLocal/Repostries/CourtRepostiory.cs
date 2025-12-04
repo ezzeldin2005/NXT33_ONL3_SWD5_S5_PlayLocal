@@ -59,6 +59,13 @@ namespace BLL.PlayLocal.Repostries
             }
         }
 
+        public void DeleteCourtsByVenueId(string venueId)
+        {
+            var courts = _context.Courts.Where(c => c.VenueID == venueId);
+            _context.Courts.RemoveRange(courts);
+            _context.SaveChanges();
+        }
+
         public Court GetCourtById(string courtId)
         {
             Court? courtToFind = _context.Courts.Find(courtId);

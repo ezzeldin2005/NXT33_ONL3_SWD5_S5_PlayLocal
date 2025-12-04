@@ -39,7 +39,11 @@ namespace BLL.PlayLocal.Repostries
 
         public IEnumerable<Venue> GetAllVenues() //Readonly
         {
-           List<Venue> venues =  _context.Venues.AsNoTracking().ToList();
+           List<Venue> venues =  _context.Venues.AsNoTracking()
+                .Include(v => v.VenueWorkingHours)
+                .Include(v => v.Courts)
+                .ToList();
+
             return venues;
         }
 
@@ -58,7 +62,23 @@ namespace BLL.PlayLocal.Repostries
         
         public int UpdateVenue(Venue venue)
         {
-            _context.Venues.Update(venue);
+            var existing = _context.Venues
+            .Include(v => v.VenueWorkingHours)
+            .FirstOrDefault(v => v.VenueID == venue.VenueID);
+
+            if (existing == null) return 0;
+
+            // Update scalar properties
+            _context.Entry(existing).CurrentValues.SetValues(venue);
+
+            // Replace working hours (you already delete + add new)
+            // So just clear and add
+            existing.VenueWorkingHours.Clear();
+            
+            foreach (var wh in venue.VenueWorkingHours)
+            {
+                existing.VenueWorkingHours.Add(wh);
+            }
             return _context.SaveChanges();
         }
 

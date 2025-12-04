@@ -438,3 +438,9 @@ body {
     border-radius: 12px;
     margin-bottom: 20px;
 }
+
+.hover-shadow:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
+    transition: all 0.3s ease;
+}

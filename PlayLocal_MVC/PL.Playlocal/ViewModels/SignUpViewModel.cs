@@ -38,6 +38,7 @@ namespace PL.Playlocal.ViewModels
 
         [Required(ErrorMessage = "Please select an account type")]
         public AccountType AccountType { get; set; }
+
     }
 }
 
