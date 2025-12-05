@@ -1,0 +1,84 @@
+﻿@model IEnumerable<CourtViewModel>
+@{
+    ViewData["Title"] = "Courts in " + ViewBag.VenueName;
+    Layout = "_OwnerLayout";
+}
+
+<div class="container mt-4">
+    <div class="d-flex justify-content-between align-items-center mb-4">
+        <div>
+            <h2>Courts in <span class="text-success">@ViewBag.VenueName</span></h2>
+        </div>
+        <a asp-controller="Owner" asp-action="AddCourt" asp-route-venueId="@ViewBag.VenueID" class="btn btn-success btn-lg">
+            Add Court
+        </a>
+    </div>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5 bg-white rounded shadow">
+            <h4>No courts added yet</h4>
+            <a asp-controller="Owner" asp-action="AddCourt" asp-route-venueId="@ViewBag.VenueID" class="btn btn-success mt-3">
+                Add Your First Court
+            </a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var court in Model)
+            {
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm">
+                        <div class="card-body">
+                            <h5 class="card-title text-success">@court.Name</h5>
+                            <p class="text-muted">@court.Size-a-side • @court.Surface • @court.Environment</p>
+                            <h4 class="text-primary">@court.PricePerHour EGP/hr</h4>
+                            <span class="badge @(court.Is_Available ? "bg-success" : "bg-danger")">
+                                @(court.Is_Available ? "Available" : "Unavailable")
+                            </span>
+                        </div>
+                        <div>
+                            <span class="card-text px-4">
+                                @if (!string.IsNullOrWhiteSpace(court.Description))
+                                {
+                                    @court.Description
+                                }
+                                else
+                                {
+                                    <span class="text-muted> fst-italic">No description provided.</span>
+                                }
+                            </span>
+                        </div>
+                        <div class="m-4">
+                            <strong class="text-muted d-block mb-2">Supported Sports:</strong>
+                            @if (court.AvailableSports?.Any() == true)
+                            {
+                                foreach (var sport in court.AvailableSports)
+                                {
+                                    <span class="badge rounded-pill bg-success text-white me-2 mb-2 px-3 py-2 fs-6">
+                                        @sport.Name
+                                    </span>
+                                }
+                            }
+                            else
+                            {
+                                <span class="text-muted fst-italic">No sports selected</span>
+                            }
+                        </div>
+                        <div class="card-footer bg-transparent">
+                            <a asp-action="EditCourt" asp-route-id="@court.CourtID"
+                               class="btn btn-outline-success btn-sm flex-fill me-2">Edit</a>
+
+                            <form asp-controller="Owner" asp-action="DeleteCourt" asp-route-id="@court.CourtID" method="get" class="d-inline">
+                                <button type="submit" class="btn btn-outline-danger btn-sm flex-fill">
+                                    Delete
+                                </button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

@@ -1,0 +1,127 @@
+﻿@model CourtViewModel
+@{
+    ViewData["Title"] = "Edit Court";
+    Layout = "_OwnerLayout";
+}
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-lg-9">
+            <div class="card shadow-lg border-0">
+                <div class="card-header bg-primary text-white text-center py-4">
+                    <h3>Edit Court</h3>
+                </div>
+                <div class="card-body p-5">
+
+                    @if (!ViewData.ModelState.IsValid)
+                    {
+                        <div class="alert alert-danger">
+                            <strong>Please fix the following errors:</strong>
+                            <ul class="mb-0 mt-2">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+
+                    <form asp-controller="Owner" asp-action="EditCourt" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="CourtID" />
+                        <input type="hidden" asp-for="VenueID" />
+
+                        <div class="row g-4">
+                            <div class="col-md-8">
+                                <label asp-for="Name" class="form-label fw-bold">Court Name</label>
+                                <input asp-for="Name" class="form-control form-control-lg" placeholder="e.g. Court A, Main Field" />
+                                <span asp-validation-for="Name" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="PricePerHour" class="form-label fw-bold">Price per Hour (EGP)</label>
+                                <input asp-for="PricePerHour" class="form-control form-control-lg" type="number" step="10" />
+                                <span asp-validation-for="PricePerHour" class="text-danger"></span>
+                            </div>
+                        </div>
+
+                        <div class="my-4">
+                            <label asp-for="Description" class="form-label">Description (Optional)</label>
+                            <textarea asp-for="Description" class="form-control" rows="3" placeholder="e.g. Best for 7-a-side matches..."></textarea>
+                        </div>
+
+                        <div class="row g-4">
+                            <div class="col-md-4">
+                                <label asp-for="Size" class="form-label fw-bold">Field Size</label>
+                                <select asp-for="Size" class="form-select form-select-lg">
+                                    <option value="">Choose size...</option>
+                                    <option value="5">5-a-side</option>
+                                    <option value="7">7-a-side</option>
+                                    <option value="11">11-a-side</option>
+                                </select>
+                                <span asp-validation-for="Size" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="Surface" class="form-label fw-bold">Surface Type</label>
+                                <select asp-for="Surface" class="form-select form-select-lg">
+                                    <option value="">Select surface...</option>
+                                    <option value="Artificial Grass">Artificial Grass</option>
+                                    <option value="Natural Grass">Natural Grass</option>
+                                    <option value="Tartan">Tartan</option>
+                                    <option value="Concrete">Concrete</option>
+                                </select>
+                                <span asp-validation-for="Surface" class="text-danger"></span>
+                            </div>
+
+                            <div class="col-md-4">
+                                <label asp-for="Environment" class="form-label fw-bold">Environment</label>
+                                <select asp-for="Environment" class="form-select form-select-lg">
+                                    <option value="">Select...</option>
+                                    <option value="Indoor">Indoor</option>
+                                    <option value="Outdoor">Outdoor</option>
+                                </select>
+                                <span asp-validation-for="Environment" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <label class="form-label fw-bold">Supported Sports</label>
+                            <div class="row g-3">
+                                @foreach (var sport in Model.AvailableSports)
+                                {
+                                    <div class="col-md-4">
+                                        <div class="form-check">
+                                            <input class="form-check-input" type="checkbox"
+                                                   name="SelectedSportIds" value="@sport.SportId"
+                                                   id="sport_@sport.SportId"
+                                                   checked="@Model.SelectedSportIds.Contains(sport.SportId)" />
+                                            <label class="form-check-label" for="sport_@sport.SportId">
+                                                @sport.Name
+                                            </label>
+                                        </div>
+                                    </div>
+                                }
+                            </div>
+                        </div>
+                        <div class="my-4">
+                            <div class="form-check form-switch">
+                                <input asp-for="Is_Available" class="form-check-input" type="checkbox" checked />
+                                <label asp-for="Is_Available" class="form-check-label fw-bold">Available for Booking</label>
+                            </div>
+                        </div>
+
+                        <hr class="my-5">
+
+                        <div class="d-grid d-md-flex justify-content-end gap-3 mt-5">
+                            <a asp-controller="Owner" asp-action="CourtsPage" asp-route-venueId="@Model.VenueID"
+                               class="btn btn-secondary btn-lg px-5">Cancel</a>
+                            <button type="submit" class="btn btn-success btn-lg px-5">
+                                Save Changes
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -50,7 +50,7 @@ else
                         </div>
                         @if (!string.IsNullOrEmpty(venue.Description))
                         {
-                            <p class="text-secondary small flex-grow-1">@venue.Description</p>
+                            <p class="text-secondary small flex-grow-1 mt-3">@venue.Description</p>
                         }
 
                         <div class="mt-auto">
@@ -61,7 +61,8 @@ else
                             </div>
                             
                             <div class="btn-group w-100">
-                                <a href="#" class="btn btn-outline-primary flex-fill">Courts</a>
+                                <a asp-controller="Owner" asp-action="CourtsPage" asp-route-venueId="@venue.VenueID" class="btn btn-outline-primary flex-fill">Courts</a>
+
                                 <a asp-controller="Owner"
                                    asp-action="EditVenue"
                                    asp-route-id="@venue.VenueID"

@@ -3,23 +3,28 @@
   "WorkspaceRootPath": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{6F6EBAC7-384E-45CE-8361-3338CC4FDD25}|..\\BLL.PlayLocal\\BLL.PlayLocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\bll.playlocal\\repostries\\venuerepostiory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\owner\\deletecourt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\owner\\deletecourt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\controllers\\ownercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:controllers\\ownercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\viewmodels\\venueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:viewmodels\\venueviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\owner\\courtspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\owner\\courtspage.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\owner\\editvenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\owner\\editvenue.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\viewmodels\\courtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:viewmodels\\courtviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\owner\\ownerhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\owner\\ownerhome.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\owner\\editcourt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\owner\\editcourt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|d:\\study matrieals\\digital pioneers\\gradution project\\pl.playlocal\\views\\owner\\addcourt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{A65B96B0-1FFB-48E6-A227-0835E043D1E5}|PL.Playlocal.csproj|solutionrelative:views\\owner\\addcourt.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     }
   ],
   "DocumentGroupContainers": [
@@ -29,21 +34,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 2,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "VenueRepostiory.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\BLL.PlayLocal\\Repostries\\VenueRepostiory.cs",
-              "RelativeDocumentMoniker": "..\\BLL.PlayLocal\\Repostries\\VenueRepostiory.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\BLL.PlayLocal\\Repostries\\VenueRepostiory.cs",
-              "RelativeToolTip": "..\\BLL.PlayLocal\\Repostries\\VenueRepostiory.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAswE0AAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T14:44:20.984Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
@@ -54,54 +46,80 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DeleteCourt.cshtml",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\DeleteCourt.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owner\\DeleteCourt.cshtml",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\DeleteCourt.cshtml",
+              "RelativeToolTip": "Views\\Owner\\DeleteCourt.cshtml",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAAA4AAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T13:03:05.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "EditCourt.cshtml",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\EditCourt.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owner\\EditCourt.cshtml",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\EditCourt.cshtml",
+              "RelativeToolTip": "Views\\Owner\\EditCourt.cshtml",
+              "ViewState": "AgIAAF8AAAAAAAAAAAAswHIAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T12:47:18.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
               "Title": "OwnerController.cs",
               "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Controllers\\OwnerController.cs",
               "RelativeDocumentMoniker": "Controllers\\OwnerController.cs",
               "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Controllers\\OwnerController.cs",
               "RelativeToolTip": "Controllers\\OwnerController.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAuwKwAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAA0BAAAAAAAAAAAowHcBAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T09:42:36.889Z",
+              "WhenOpened": "2025-12-05T11:06:24.327Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "EditVenue.cshtml",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\EditVenue.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\EditVenue.cshtml",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\EditVenue.cshtml",
-              "RelativeToolTip": "Views\\Owner\\EditVenue.cshtml",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABMAAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T12:20:03.637Z",
+              "Title": "CourtViewModel.cs",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\ViewModels\\CourtViewModel.cs",
+              "RelativeDocumentMoniker": "ViewModels\\CourtViewModel.cs",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\ViewModels\\CourtViewModel.cs",
+              "RelativeToolTip": "ViewModels\\CourtViewModel.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAkwCwAAAAwAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-12-05T12:10:13.719Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "VenueViewModel.cs",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\ViewModels\\VenueViewModel.cs",
-              "RelativeDocumentMoniker": "ViewModels\\VenueViewModel.cs",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\ViewModels\\VenueViewModel.cs",
-              "RelativeToolTip": "ViewModels\\VenueViewModel.cs",
-              "ViewState": "AgIAAFAAAAAAAAAAAAAmwGUAAAA9AAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T09:46:43.614Z",
+              "Title": "CourtsPage.cshtml",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\CourtsPage.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owner\\CourtsPage.cshtml",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\CourtsPage.cshtml",
+              "RelativeToolTip": "Views\\Owner\\CourtsPage.cshtml",
+              "ViewState": "AgIAACEAAAAAAAAAAAAAAEEAAAAeAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-12-05T11:35:12.162Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "OwnerHome.cshtml",
-              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\OwnerHome.cshtml",
-              "RelativeDocumentMoniker": "Views\\Owner\\OwnerHome.cshtml",
-              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\OwnerHome.cshtml",
-              "RelativeToolTip": "Views\\Owner\\OwnerHome.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAIAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "AddCourt.cshtml",
+              "DocumentMoniker": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\AddCourt.cshtml",
+              "RelativeDocumentMoniker": "Views\\Owner\\AddCourt.cshtml",
+              "ToolTip": "D:\\study matrieals\\Digital Pioneers\\Gradution Project\\PL.Playlocal\\Views\\Owner\\AddCourt.cshtml",
+              "RelativeToolTip": "Views\\Owner\\AddCourt.cshtml",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAmwFcAAAAeAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-12-04T09:32:03.366Z",
+              "WhenOpened": "2025-12-05T11:44:46.866Z",
               "EditorCaption": ""
             }
           ]

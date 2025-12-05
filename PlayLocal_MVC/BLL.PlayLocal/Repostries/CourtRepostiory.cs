@@ -68,8 +68,9 @@ namespace BLL.PlayLocal.Repostries
 
         public Court GetCourtById(string courtId)
         {
-            Court? courtToFind = _context.Courts.Find(courtId);
-
+            Court? courtToFind = _context.Courts
+                .Include(c => c.SportsTypes)
+                .FirstOrDefault(c => c.CourtID == courtId);
             return courtToFind;
         }
 

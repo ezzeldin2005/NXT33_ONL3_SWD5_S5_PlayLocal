@@ -1,0 +1,39 @@
+﻿@model CourtViewModel
+@{
+    ViewData["Title"] = "Delete Court";
+    Layout = "_OwnerLayout";
+}
+
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header bg-danger text-white text-center py-4">
+                    <h3>Delete Court</h3>
+                </div>
+                <div class="card-body p-5 text-center">
+                    <i class="fas fa-exclamation-triangle fa-5x text-danger mb-4"></i>
+                    <h4 class="text-danger">Are you sure?</h4>
+                    <h5 class="fw-bold">@Model.Name</h5>
+                    <p class="text-muted">
+                        This will permanently delete this court and all its data.
+                        This action <strong>cannot</strong> be undone.
+                    </p>
+
+                    <form asp-action="DeleteCourt" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="courtId" value="@Model.CourtID" />
+
+                        <div class="mt-4">
+                            <a asp-action="CourtsPage" asp-route-venueId="@Model.VenueID"
+                               class="btn btn-secondary btn-lg px-5">Cancel</a>
+                            <button type="submit" class="btn btn-danger btn-lg px-5">
+                                Yes, Delete Forever
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

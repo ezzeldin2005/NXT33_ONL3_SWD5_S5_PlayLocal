@@ -49,7 +49,9 @@ namespace BLL.PlayLocal.Repostries
 
         public IEnumerable<Court> GetCourtsByVenueId(string venueId) //Readonly
         {
-            List<Court> courts = _context.Courts.AsNoTracking().Where(c => c.VenueID == venueId).ToList();
+            List<Court> courts = _context.Courts.AsNoTracking().Where(c => c.VenueID == venueId).
+                                 Include(c => c.SportsTypes)
+                                .ToList();
             return courts;
         }
 
