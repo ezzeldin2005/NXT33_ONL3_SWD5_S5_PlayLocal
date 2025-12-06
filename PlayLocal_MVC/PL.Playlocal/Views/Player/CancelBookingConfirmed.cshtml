@@ -1,0 +1,41 @@
+﻿@model BookingViewModel
+@{
+    ViewData["Title"] = "Cancel Booking";
+    Layout = "_PlayerLayout";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+            <div class="card border-0 shadow-lg">
+                <div class="card-header bg-danger text-white text-center py-4">
+                    <h3>Cancel Booking</h3>
+                </div>
+                <div class="card-body text-center py-5">
+                    <i class="fas fa-exclamation-triangle fa-5x text-danger mb-4"></i>
+                    <h4 class="text-danger fw-bold">Are you sure?</h4>
+                    <h5>@Model.CourtName</h5>
+                    <p class="text-muted">
+                        <strong>@Model.BookingDate</strong><br>
+                        @Model.StartTime.ToString(@"hh\:mm") - @Model.EndTime.ToString(@"hh\:mm")
+                    </p>
+                    <p class="text-danger fw-bold">This action cannot be undone!</p>
+
+                    <form asp-action="CancelBookingConfirmed" method="post">
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" name="bookingId" value="@Model.BookingID" />
+
+                        <div class="mt-4">
+                            <a asp-action="MyBookings" class="btn btn-secondary btn-lg px-5 me-3">
+                                No, Keep It
+                            </a>
+                            <button type="submit" class="btn btn-danger btn-lg px-5">
+                                Yes, Cancel Booking
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

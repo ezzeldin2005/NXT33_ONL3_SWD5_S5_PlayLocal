@@ -43,8 +43,12 @@ namespace BLL.PlayLocal.Repostries
 
         public Booking GetBookingById(string bookingId)
         {
-          Booking? bookingToFind =  _context.Bookings.Find(bookingId);
-            
+            Booking? bookingToFind = _context.Bookings
+                .Include(b => b.Player)
+                .Include(b => b.Court)
+                .ThenInclude(c => c!.Venue)
+                .FirstOrDefault(b => b.BookingID == bookingId);
+
             return bookingToFind;
         }
 
@@ -59,7 +63,15 @@ namespace BLL.PlayLocal.Repostries
         public IEnumerable<Booking> GetBookingsByPlayerId(string playerId) //Readonly
         {
 
-            List<Booking> bookings = _context.Bookings.AsNoTracking().Where(b => b.PlayerID == playerId).ToList();
+            List<Booking> bookings = _context.Bookings.AsNoTracking()
+                                           .Where(b => b.PlayerID == playerId)
+                                           .Include(b => b.Court)
+                                           .ThenInclude(c => c!.Venue)
+                                           .Include(b => b.Court)
+                                           .ThenInclude(c => c!.SportsTypes)
+                                           .OrderByDescending(b => b.BookingDate)
+                                           .ThenBy(b => b.StartTime)
+                                           .ToList();
 
             return bookings;
         }
@@ -77,11 +89,28 @@ namespace BLL.PlayLocal.Repostries
                                          );
         }
 
+        public IEnumerable<Booking> GetBookingsByCourtAndDate(string courtId, DateTime date)
+        {
+            return _context.Bookings
+                           .AsNoTracking()
+                           .Where(b => b.CourtID == courtId && b.BookingDate.Date == date.Date)
+                           .ToList();
+        }
         public int UpdateBooking(Booking booking)
         {
             _context.Bookings.Update(booking);
 
             return _context.SaveChanges();
+        }
+
+        public IEnumerable<Booking> GetAllBookings()
+        {
+            return _context.Bookings
+                           .Include(b => b.Court!)
+                               .ThenInclude(c => c!.Venue)
+                           .Include(b => b.Player)
+                           .AsNoTracking()
+                           .ToList();
         }
     }
 }

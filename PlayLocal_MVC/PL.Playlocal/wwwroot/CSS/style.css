@@ -444,3 +444,42 @@ body {
     box-shadow: 0 20px 40px rgba(0,0,0,0.12) !important;
     transition: all 0.3s ease;
 }
+
+.avatar-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.info-item {
+    transition: all 0.3s ease;
+    border: 1px solid #e0e0e0;
+}
+
+    .info-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        border-color: #16a34a;
+    }
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+    .hover-lift:hover {
+        transform: translateY(-12px);
+        box-shadow: 0 25px 50px rgba(22, 163, 74, 0.25) !important;
+    }
+
+.card {
+    transition: transform 0.3s ease;
+}
+
+    .card:hover {
+        transform: translateY(-10px);
+    }
+
+.border-start {
+    border-left-width: 6px !important;
+}

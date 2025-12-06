@@ -20,6 +20,8 @@ namespace BLL.PlayLocal.Interfaces
         // Manage sports for a court
         void AddSportsToCourt(string courtId, IEnumerable<string> sportsIds);
         void RemoveSportsFromCourt(string courtId, IEnumerable<string> sportsIds);
+
+        public IEnumerable<Court> GetAllCourts();
     }
 
 }

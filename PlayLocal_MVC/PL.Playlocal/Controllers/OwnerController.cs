@@ -13,13 +13,17 @@ namespace PL.Playlocal.Controllers
         private readonly IVenueWorkingHoursRepository _venueWorkingHoursRepository;
         private readonly ICourtRepository _courtRepository;
         private readonly ISportsTypeRepository _sportRepository;
+        private readonly IOwnerRepostry _ownerRepository;
+        private readonly IBookingRepository _bookingRepo;
 
-        public OwnerController(IVenueRepository venueRepository, IVenueWorkingHoursRepository venueWorkingHoursRepository, ICourtRepository courtRepository, ISportsTypeRepository sportRepository)
+        public OwnerController(IVenueRepository venueRepository, IVenueWorkingHoursRepository venueWorkingHoursRepository, ICourtRepository courtRepository, ISportsTypeRepository sportRepository, IOwnerRepostry ownerRepository, IBookingRepository bookingRepo)
         {
             _venueRepository = venueRepository;
             _venueWorkingHoursRepository = venueWorkingHoursRepository;
             _courtRepository = courtRepository;
             _sportRepository = sportRepository;
+            _ownerRepository = ownerRepository;
+            _bookingRepo = bookingRepo;
         }
         public IActionResult OwnerHome()
         {
@@ -409,6 +413,75 @@ namespace PL.Playlocal.Controllers
             return RedirectToAction("CourtsPage", new { venueId = court.VenueID });
         }
         #endregion
+        #endregion
+
+        #region Profile
+        [HttpGet]
+        public IActionResult Profile()
+        {
+            if (HttpContext.Session.GetString("UserType") != "Owner")
+                return RedirectToAction("Login", "Home");
+
+            var ownerId = HttpContext.Session.GetString("UserId");
+
+            var owner = _ownerRepository.GetOwnerById(ownerId);
+            if (owner == null) return NotFound();
+
+            var vm = owner.ToViewModel();
+            return View(vm);
+        }
+        #endregion
+
+        #region Owner Bookings
+        [HttpGet]
+        public IActionResult Bookings()
+        {
+            if (HttpContext.Session.GetString("UserType") != "Owner")
+                return RedirectToAction("Login", "Home");
+
+            var ownerId = HttpContext.Session.GetString("UserId");
+
+            var bookings = _bookingRepo.GetAllBookings()
+                                       .Where(b => b.Court!.Venue!.OwnerID == ownerId)
+                                       .OrderByDescending(b => b.BookingDate)
+                                       .ThenBy(b => b.StartTime);
+
+            var vm = bookings.ToViewModelList();
+
+            ViewBag.UserName = HttpContext.Session.GetString("UserName") ?? "Owner";
+
+            return View(vm);
+        }
+
+        [HttpPost]
+        public IActionResult ConfirmBooking(string id)
+        {
+            var booking = _bookingRepo.GetBookingById(id);
+
+            var ownerId = HttpContext.Session.GetString("UserId");
+
+            if (booking != null && booking.Court?.Venue?.OwnerID == ownerId)
+            {
+                booking.Status = DAL.PlayLocal.Models.BookingStatus.Confirmed;
+                _bookingRepo.UpdateBooking(booking);
+                TempData["Success"] = "Booking confirmed!";
+            }
+            return RedirectToAction("Bookings");
+        }
+
+        [HttpPost]
+        public IActionResult CancelBookingByOwner(string id)
+        {
+            var booking = _bookingRepo.GetBookingById(id);
+
+            if (booking != null && booking.Court?.Venue?.OwnerID == HttpContext.Session.GetString("UserId"))
+            {
+                _bookingRepo.CancelBooking(id);
+
+                TempData["Success"] = "Booking cancelled by owner.";
+            }
+            return RedirectToAction("Bookings");
+        }
         #endregion
 
     }

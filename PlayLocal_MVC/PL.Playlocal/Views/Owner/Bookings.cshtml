@@ -1,0 +1,90 @@
+﻿@model IEnumerable<BookingViewModel>
+@{
+    ViewData["Title"] = "All Bookings";
+    Layout = "_OwnerLayout";
+}
+
+<div class="container py-5">
+    <h1 class="display-5 text-success text-center mb-5">All Bookings</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5">
+            <i class="fas fa-calendar-times fa-5x text-muted mb-4"></i>
+            <h3>No bookings yet</h3>
+            <a asp-action="OwnerHome" class="btn btn-success btn-lg mt-3">Back to Dashboard</a>
+        </div>
+    }
+    else
+    {
+        <div class="table-responsive">
+            <table class="table table-hover align-middle">
+                <thead class="bg-success text-white">
+                    <tr>
+                        <th>Player</th>
+                        <th>Venue</th>
+                        <th>Court</th>
+                        <th>Date</th>
+                        <th>Time</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var b in Model)
+                    {
+                        <tr class="@(b.Status == BookingStatus.Cancelled ? "table-danger" : b.Status == BookingStatus.Confirmed ? "table-success" : "")">
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <div class="bg-light rounded-circle d-flex align-items-center justify-content-center me-3"
+                                         style="width: 45px; height: 45px;">
+                                        <i class="fas fa-user text-success fa-lg"></i>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <strong>@b.VenueName</strong><br>
+                                <small class="text-muted">@b.VenueAddress</small>
+                            </td>
+                            <td><strong>@b.CourtName</strong></td>
+                            <td>@b.BookingDate</td>
+                            <td>@b.StartTime.ToString(@"hh\:mm") - @b.EndTime.ToString(@"hh\:mm")</td>
+                            <td class="fw-bold text-success">@b.AmountPaid EGP</td>
+                            <td>
+                                <span class="badge @b.StatusBadgeClass px-3 py-2 fs-6">
+                                    @b.Status
+                                </span>
+                            </td>
+                            <td>
+                                @if (b.Status == BookingStatus.Pending)
+                                {
+                                    <form asp-action="ConfirmBooking" asp-route-id="@b.BookingID" method="post" class="d-inline">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-success btn-sm">
+                                            Confirm
+                                        </button>
+                                    </form>
+                                    <form asp-action="CancelBookingByOwner" asp-route-id="@b.BookingID" method="post" class="d-inline ms-2">
+                                        @Html.AntiForgeryToken()
+                                        <button type="submit" class="btn btn-danger btn-sm">
+                                            Cancel
+                                        </button>
+                                    </form>
+                                }
+                                else if (b.Status == BookingStatus.Confirmed)
+                                {
+                                    <span class="text-success fw-bold">Confirmed</span>
+                                }
+                                else
+                                {
+                                    <span class="text-muted">—</span>
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+</div>

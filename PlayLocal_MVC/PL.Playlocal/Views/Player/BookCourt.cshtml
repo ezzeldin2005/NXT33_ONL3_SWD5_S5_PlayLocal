@@ -1,0 +1,145 @@
+﻿@model BookCourtViewModel
+@{
+    ViewData["Title"] = "Book Court";
+    Layout = "_PlayerLayout";
+}
+
+<div class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-10">
+            <div class="card shadow-lg border-0 rounded-4 overflow-hidden">
+                <!-- Header -->
+                <div class="bg-success text-white text-center py-5">
+                    <h1 class="display-5 fw-bold mb-2">@Model.CourtName</h1>
+                    <h4 class="opacity-90">@Model.VenueName</h4>
+                    <h3 class="mt-3">@Model.PricePerHour EGP/hour</h3>
+                </div>
+
+                <div class="card-body p-5">
+                    @if (!ViewData.ModelState.IsValid || TempData["Error"] != null)
+                    {
+                        <div class="alert alert-danger">
+                            <strong>Please fix the following errors:</strong>
+                            <ul class="mb-0 mt-2">
+                                @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+                                {
+                                    <li>@error.ErrorMessage</li>
+                                }
+                            </ul>
+                        </div>
+                    }
+
+                    <form asp-action="BookCourt" method="post" class="needs-validation" novalidate>
+                        @Html.AntiForgeryToken()
+                        <input type="hidden" asp-for="CourtID" />
+                        <input type="hidden" asp-for="PricePerHour" />
+
+                        <div class="row g-4 align-items-end">
+                            <!-- Date Picker -->
+                            <div class="col-md-5">
+                                <label class="form-label fw-bold">Select Date</label>
+                                <input type="date" asp-for="BookingDate" class="form-control form-control-lg"
+                                       min="@DateTime.Today.ToString("yyyy-MM-dd")" required />
+                                <div class="invalid-feedback">Please select a valid date.</div>
+                            </div>
+
+                            <!-- Start Time -->
+                            <div class="col-md-3">
+                                <label class="form-label fw-bold">From</label>
+                                <select asp-for="StartTime" class="form-select form-select-lg" required>
+                                    <option value="">Choose time...</option>
+                                    @foreach (var slot in Model.AvailableSlots)
+                                    {
+                                        var isBooked = Model.BookedSlots.Contains(slot);
+                                        <option value="@slot" disabled="@isBooked">
+                                            @($"{slot.Hours:D2}:{slot.Minutes:D2}")
+                                            @(isBooked ? " (Booked)" : "")
+                                        </option>
+                                    }
+                                </select>
+                            </div>
+
+                            <!-- End Time -->
+                            <div class="col-md-3">
+                                <label class="form-label fw-bold">To</label>
+                                <select asp-for="EndTime" class="form-select form-select-lg" required>
+                                    <option value="">Choose time...</option>
+                                    @foreach (var slot in Model.AvailableSlots.Skip(1))
+                                    {
+                                        var endSlot = slot.Add(TimeSpan.FromHours(1));
+                                        <option value="@endSlot">
+                                            @($"{endSlot.Hours:D2}:{endSlot.Minutes:D2}")
+                                        </option>
+                                    }
+                                </select>
+                            </div>
+
+                            <!-- Book Button -->
+                            <div class="col-md-1 text-center">
+                                <button type="submit" class="btn btn-success btn-lg w-500">
+                                    Book
+                                </button>
+                            </div>
+                        </div>
+
+                        <div class="mt-4 text-center">
+                            <a asp-action="PlayerHome" class="btn btn-outline-secondary btn-lg">
+                                Back to Courts
+                            </a>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script>
+        document.querySelector('[asp-for="BookingDate"]').addEventListener('change', function () {
+            const date = this.value;
+            const courtId = "@Model.CourtID";
+
+            if (!date) return;
+
+            fetch(`/Player/GetAvailableSlots?courtId=${courtId}&date=${date}`)
+                .then(r => r.json())
+                .then(data => {
+                    const startSelect = document.querySelector('[asp-for="StartTime"]');
+                    const endSelect = document.querySelector('[asp-for="EndTime"]');
+
+                    startSelect.innerHTML = '<option value="">Choose time...</option>';
+                    endSelect.innerHTML = '<option value="">Choose time...</option>';
+
+                    data.availableSlots.forEach(slot => {
+                        const [h, m] = slot.split(':');
+                        const isBooked = data.bookedSlots.includes(slot);
+
+                        const option = document.createElement('option');
+                        option.value = slot;
+                        option.text = `${h.padStart(2, '0')}:${m}`;
+
+                        if (isBooked) {
+                            option.disabled = true;
+                            option.text += " (Booked)";
+                        }
+
+                        startSelect.add(option);
+                    });
+
+                    // Auto-fill end time
+                    startSelect.addEventListener('change', function () {
+                        if (this.value) {
+                            const [h, m] = this.value.split(':');
+                            const endH = (parseInt(h) + 1) % 24;
+
+                            endSelect.value = `${endH.toString().padStart(2, '0')}:${m}`;
+                        }
+                    });
+                })
+                .catch(err => console.error(err));
+        });
+    </script>
+}
+
+}

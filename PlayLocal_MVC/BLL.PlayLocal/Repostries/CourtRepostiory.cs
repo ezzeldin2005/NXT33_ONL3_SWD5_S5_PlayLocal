@@ -69,8 +69,11 @@ namespace BLL.PlayLocal.Repostries
         public Court GetCourtById(string courtId)
         {
             Court? courtToFind = _context.Courts
+                .Include(c => c.Venue)
+                .ThenInclude(v => v!.VenueWorkingHours)
                 .Include(c => c.SportsTypes)
                 .FirstOrDefault(c => c.CourtID == courtId);
+
             return courtToFind;
         }
 
@@ -105,6 +108,15 @@ namespace BLL.PlayLocal.Repostries
         {
             _context.Courts.Update(court);
             return _context.SaveChanges();
+        }
+
+        public IEnumerable<Court> GetAllCourts()
+        {
+            return _context.Courts
+                .Include(c => c.SportsTypes)
+                .Include(c => c.Venue)
+                .AsNoTracking()
+                .ToList();
         }
     }
 }

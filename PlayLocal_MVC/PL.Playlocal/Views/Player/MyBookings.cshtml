@@ -1,0 +1,67 @@
+﻿@model IEnumerable<BookingViewModel>
+@{
+    ViewData["Title"] = "My Bookings";
+    Layout = "_PlayerLayout";
+}
+
+<div class="container py-5">
+    <h1 class="display-5 text-success text-center mb-5">My Bookings</h1>
+
+    @if (!Model.Any())
+    {
+        <div class="text-center py-5">
+            <i class="fas fa-calendar-times fa-5x text-muted mb-4"></i>
+            <h3>No bookings yet</h3>
+            <a asp-action="PlayerHome" class="btn btn-success btn-lg mt-3">Book Your First Court!</a>
+        </div>
+    }
+    else
+    {
+        <div class="row g-4">
+            @foreach (var b in Model)
+            {
+                <div class="col-lg-6">
+                    <div class="card shadow-sm h-100 border-0 @(b.Status == BookingStatus.Cancelled ? "border-danger" : b.Status == BookingStatus.Completed ? "border-success" : "")">
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-start mb-3">
+                                <div>
+                                    <h4 class="text-success fw-bold mb-1">@b.CourtName</h4>
+                                    <h6 class="text-primary mb-2">
+                                        <i class="fas fa-map-marker-alt"></i> @b.VenueName
+                                    </h6>
+                                    <p class="text-muted small mb-2">@b.VenueAddress</p>
+                                </div>
+                                <span class="badge fs-6 @b.StatusBadgeClass px-3 py-2">
+                                    @b.Status
+                                </span>
+                            </div>
+
+                            <div class="row text-muted small mb-4">
+                                <div class="col-6">
+                                    <i class="fas fa-calendar"></i>
+                                    @b.BookingDate.ToString("ddd, dd MMM yyyy")
+                                </div>
+                                <div class="col-6">
+                                    <i class="fas fa-clock"></i>
+                                    @b.StartTime.ToString(@"hh\:mm") - @b.EndTime.ToString(@"hh\:mm")
+                                </div>
+                            </div>
+
+                            <div class="d-flex justify-content-between align-items-center">
+                                <h4 class="text-success fw-bold">@b.AmountPaid EGP</h4>
+
+                                @if (b.Status == BookingStatus.Pending || b.Status == BookingStatus.Confirmed)
+                                {
+                                    <a asp-controller="Player" asp-action="CancelBookingConfirmed" asp-route-id="@b.BookingID"
+                                       class="btn btn-outline-danger btn-sm">
+                                        Cancel Booking
+                                    </a>
+                                }
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    }
+</div>

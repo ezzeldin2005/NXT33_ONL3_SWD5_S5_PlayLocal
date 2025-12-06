@@ -19,6 +19,8 @@ namespace BLL.PlayLocal.Interfaces
 
         // System logic requirement
         bool IsCourtAvailable(string courtId, DateTime date, TimeSpan start, TimeSpan end);
+        IEnumerable<Booking> GetBookingsByCourtAndDate(string courtId, DateTime date);
+        IEnumerable<Booking> GetAllBookings();
     }
 
 }

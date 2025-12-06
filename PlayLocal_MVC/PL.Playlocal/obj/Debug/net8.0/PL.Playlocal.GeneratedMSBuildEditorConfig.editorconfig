@@ -48,6 +48,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcQWRkVmVudWUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Owner/Bookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcQm9va2luZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Owner/CourtsPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcQ291cnRzUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -72,8 +76,28 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcT3duZXJIb21lLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Owner/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcT3duZXJcUHJvZmlsZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Player/BookCourt.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyXEJvb2tDb3VydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Player/CancelBookingConfirmed.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyXENhbmNlbEJvb2tpbmdDb25maXJtZWQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Player/MyBookings.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyXE15Qm9va2luZ3MuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Player/PlayerHome.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyXFBsYXllckhvbWUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Player/Profile.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUGxheWVyXFByb2ZpbGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/study matrieals/Digital Pioneers/Gradution Project/PL.Playlocal/Views/Shared/Error.cshtml]
