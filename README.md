@@ -4,12 +4,6 @@
 •	Objective: 
 To develop and launch PlayLocal, a comprehensive, community-centric  platform that revolutionizes the amateur sports experience in Egypt. The primary goal is to move beyond simple transactional bookings by creating an integrated ecosystem that simplifies organization for players and provides powerful, data-driven business tools for venue owners to maximize profitability and efficiency
 
-# Team Memebers:
-1.	عزالدين عمر عبد اللطيف عوض
-2.	احمد ابراهيم يوسف احمد
-3.	احمد عمر بكري توفيقل
-4.	إسلام علي عبدالستار كامل
-5.	ياسمين محمود حسين طنطاوي
 # Contact:
 Please send an email to Book a meeting on the Teams link
 
